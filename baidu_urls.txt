@@ -1,2 +1,1 @@
 /first_post/
-/post/001-build-your-own-hugo-blog-z1xwkab.html
