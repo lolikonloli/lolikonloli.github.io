@@ -1,11 +1,11 @@
-# 构建自己的Hugo博客
+# 
 
 
 # 001 构建自己的hugo博客
 
 　　hugo是一个轻量级的静态网页生成工具。本文就简单的记录一下使用hugo搭建博客，使用两个仓库实现源代码和web文件之间的隔离，使用github action实现自动化部署，之后也会记录一下美化的过程。
 
-# 安装软件
+## 安装软件
 
 ## 安装hugo
 
@@ -33,9 +33,9 @@
 
 　　打开终端，输入git version，如果可以看到输出版本号，则安装完成
 
-# 初始化网站
+### 初始化网站
 
-## 初始化文件夹
+### 初始化文件夹
 
 　　打开你要存放博客源文件的文件夹，在空白处右键，找到在此处打开cmd/powershell/wt
 
@@ -57,17 +57,17 @@
 
 　　输入`hugo server`​已经可以看到部署起来的网页了
 
-# 添加文章
+## 添加文章
 
-# 本地化部署
+## 本地化部署
 
-# 使用Github Action自动化部署
+## 使用Github Action自动化部署
 
-# 使用思源笔记和自动化部署插件
+## 使用思源笔记和自动化部署插件
 
 
 ---
 
 > 作者: lolikonloli  
-> URL: /post/001-build-your-own-hugo-blog-z1xwkab.html  
+> URL: /001-build-your-own-hugo-blog-z1xwkab/  
 
