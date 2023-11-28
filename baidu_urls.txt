@@ -8,5 +8,6 @@
 /test_03/
 /test_04/
 /build-your-own-hugo-blog/
+/001-build-your-own-hugo-blog-z1xwkab/
 /about/
 /archives/
