@@ -9,5 +9,6 @@
 /test_04/
 /build-your-own-hugo-blog/
 /001-build-your-own-hugo-blog-z1xwkab/
+/opencv-basic-operation-1-z2ar0rs/
 /about/
 /archives/
