@@ -1,6 +1,5 @@
 # 构建自己的Hugo博客
 
-
 # 构建自己的Hugo博客
 
 　　hugo是一个轻量级的静态网页生成工具。本文就简单的记录一下使用hugo搭建博客，使用两个仓库实现源代码和web文件之间的隔离，使用github action实现自动化部署，之后也会记录一下美化的过程。
@@ -43,21 +42,21 @@
 
 　　可以看到终端的最前面，会显示这个终端所在的路径，确定这个路径是你要存放博客源文件的路径
 
-　　输入`hugo new site `博客文件夹名字``​
+　　输入 `hugo new site `博客文件夹名字``
 
-　　进入文件夹 输入`cd `博客文件夹名字``​
+　　进入文件夹 输入 `cd `博客文件夹名字``
 
-　　输入`hugo server`​，可以看到Page Not Found
+　　输入 `hugo server`，可以看到Page Not Found
 
 ## 使用主题
 
-　　输入`git init`​
+　　输入 `git init`
 
-　　输入`git submodule add https://github.com/hugo-fixit/FixIt     ./themes/FixIt`​
+　　输入 `git submodule add https://github.com/hugo-fixit/FixIt     ./themes/FixIt`
 
-　　打开hugo.toml，添加如下关键字`theme = ""`​，将主题修改为FixIt
+　　打开hugo.toml，添加如下关键字 `theme = ""`，将主题修改为FixIt
 
-　　输入`hugo server`​已经可以看到部署起来的网页了
+　　输入 `hugo server`已经可以看到部署起来的网页了
 
 # 添加文章
 
