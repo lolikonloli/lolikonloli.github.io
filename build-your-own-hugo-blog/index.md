@@ -1,5 +1,4 @@
-# 
-
+# 构建自己的Hugo博客
 
 # 构建自己的Hugo博客
 
@@ -71,5 +70,5 @@
 ---
 
 > 作者: lolikonloli  
-> URL: /001-build-your-own-hugo-blog-z1xwkab/  
+> URL: /build-your-own-hugo-blog/  
 

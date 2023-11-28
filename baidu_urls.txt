@@ -1,2 +1,12 @@
-/first_post/
-/001-build-your-own-hugo-blog-z1xwkab/
+/test_1_05/
+/test_1_04/
+/test_1_03/
+/test_1_02/
+/test_1_01/
+/test_01/
+/test_02/
+/test_03/
+/test_04/
+/build-your-own-hugo-blog/
+/about/
+/archives/
