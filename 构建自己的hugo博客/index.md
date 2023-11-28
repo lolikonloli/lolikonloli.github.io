@@ -1,10 +1,11 @@
 # 构建自己的Hugo博客
 
+
 # 构建自己的Hugo博客
 
 　　hugo是一个轻量级的静态网页生成工具。本文就简单的记录一下使用hugo搭建博客，使用两个仓库实现源代码和web文件之间的隔离，使用github action实现自动化部署，之后也会记录一下美化的过程。
 
-　　![](http://127.0.0.1:6806/assets/image-20231127201019-zlo707q.png "测试图片1")
+　　![测试图片1](/posts/构建自己的Hugo博客/image-20231127201019-zlo707q.png)
 
 # 安装软件
 
@@ -70,5 +71,5 @@
 ---
 
 > 作者: lolikonloli  
-> URL: /build-your-own-hugo-blog/  
+> URL: /%E6%9E%84%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84hugo%E5%8D%9A%E5%AE%A2/  
 
