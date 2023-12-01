@@ -5,6 +5,6 @@
 
 ---
 
-> 作者: lolikonloli  
+> 作者:   
 > URL: /about/  
 

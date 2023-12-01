@@ -66,6 +66,6 @@
 
 ---
 
-> 作者: lolikonloli  
+> 作者:   
 > URL: /%E6%9E%84%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84hugo%E5%8D%9A%E5%AE%A2/  
 
