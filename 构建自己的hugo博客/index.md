@@ -50,7 +50,7 @@
 
 　　输入 `git submodule add https://github.com/hugo-fixit/FixIt     ./themes/FixIt`
 
-　　打开hugo.toml，添加如下关键字 `theme = ""`，将主题修改为FixIt
+　　打开hugo.toml，添加如下关键字 `theme = &#34;&#34;`，将主题修改为FixIt
 
 　　输入 `hugo server`已经可以看到部署起来的网页了
 
