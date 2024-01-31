@@ -2,7 +2,7 @@
 
 # 作者信息
 
-　　`&lt;img src=&#34;/posts/01_论文阅读Vision_Transformer_with_Quadrangle_Attention/image-20240123134331-qnvsgmy.webp&#34; alt=&#34;图片描述&#34; width=&#34;auto&#34; height=&#34;auto&#34;&gt;`
+　　&lt;img src=&#34;/posts/01_论文阅读Vision_Transformer_with_Quadrangle_Attention/image-20240123134331-qnvsgmy.webp&#34; alt=&#34;图片描述&#34; width=&#34;auto&#34; height=&#34;auto&#34;&gt;
 
 &lt;!-- &lt;img src=&#34;/posts/01_论文阅读Vision_Transformer_with_Quadrangle_Attention/image-20240123134331-qnvsgmy.webp&#34; alt=&#34;图片描述&#34; width=&#34;auto&#34; height=&#34;auto&#34;&gt; --&gt;
 
@@ -48,29 +48,29 @@
 
 ### 四边生成
 
-　　定义如下变换矩阵T：`&lt;img src=&#34;/posts/01_论文阅读Vision_Transformer_with_Quadrangle_Attention/image-20240128164527-7g6kolu.webp&#34; alt=&#34;图片描述&#34; width=&#34;auto&#34; height=&#34;auto&#34;&gt;`，a = [a1, a2;a3, a4]定义了缩放、旋转和剪切的转换，b = [b1;b2]定义了平移，c = [c1, c2]是一个投影向量，它定义了当观察者的视角在深度维度上变化时感知对象如何变化。
+　　定义如下变换矩阵T：&lt;img src=&#34;/posts/01_论文阅读Vision_Transformer_with_Quadrangle_Attention/image-20240128164527-7g6kolu.webp&#34; alt=&#34;图片描述&#34; width=&#34;auto&#34; height=&#34;auto&#34;&gt;，a = [a1, a2;a3, a4]定义了缩放、旋转和剪切的转换，b = [b1;b2]定义了平移，c = [c1, c2]是一个投影向量，它定义了当观察者的视角在深度维度上变化时感知对象如何变化。
 
-　　直接回归八个参数并不容易，因此将其拆分。首先预测$t \in R^9$,`&lt;img src=&#34;/posts/01_论文阅读Vision_Transformer_with_Quadrangle_Attention/image-20240128165006-vv471mc.webp&#34; alt=&#34;图片描述&#34; width=&#34;auto&#34; height=&#34;auto&#34;&gt;`
+　　直接回归八个参数并不容易，因此将其拆分。首先预测$t \in R^9$,&lt;img src=&#34;/posts/01_论文阅读Vision_Transformer_with_Quadrangle_Attention/image-20240128165006-vv471mc.webp&#34; alt=&#34;图片描述&#34; width=&#34;auto&#34; height=&#34;auto&#34;&gt;
 
-　　得到t后，根据如下公式得到对应的参数：`&lt;img src=&#34;/posts/01_论文阅读Vision_Transformer_with_Quadrangle_Attention/image-20240128165144-8g03l6r.webp&#34; alt=&#34;图片描述&#34; width=&#34;auto&#34; height=&#34;auto&#34;&gt;`，其中$\beta_1=\frac{W}{w}, \beta_2=\frac{H}{h}$是缩放相关的参数，以帮助使模型适应不同的输入大小
+　　得到t后，根据如下公式得到对应的参数：&lt;img src=&#34;/posts/01_论文阅读Vision_Transformer_with_Quadrangle_Attention/image-20240128165144-8g03l6r.webp&#34; alt=&#34;图片描述&#34; width=&#34;auto&#34; height=&#34;auto&#34;&gt;，其中$\beta_1=\frac{W}{w}, \beta_2=\frac{H}{h}$是缩放相关的参数，以帮助使模型适应不同的输入大小
 
-　　最终的T计算如下：`&lt;img src=&#34;/posts/01_论文阅读Vision_Transformer_with_Quadrangle_Attention/image-20240128165616-ppkvhta.webp&#34; alt=&#34;图片描述&#34; width=&#34;auto&#34; height=&#34;auto&#34;&gt;`
+　　最终的T计算如下：&lt;img src=&#34;/posts/01_论文阅读Vision_Transformer_with_Quadrangle_Attention/image-20240128165616-ppkvhta.webp&#34; alt=&#34;图片描述&#34; width=&#34;auto&#34; height=&#34;auto&#34;&gt;
 
 　　给定点$(x_1, y_1)$，根据如下计算就能得到变换点的坐标：
-`&lt;img src=&#34;/posts/01_论文阅读Vision_Transformer_with_Quadrangle_Attention/image-20240128165725-y02ez8l.webp&#34; alt=&#34;图片描述&#34; width=&#34;auto&#34; height=&#34;auto&#34;&gt;`
-`&lt;img src=&#34;/posts/01_论文阅读Vision_Transformer_with_Quadrangle_Attention/image-20240128170401-2kfezb5.webp&#34; alt=&#34;图片描述&#34; width=&#34;auto&#34; height=&#34;auto&#34;&gt;`
+&lt;img src=&#34;/posts/01_论文阅读Vision_Transformer_with_Quadrangle_Attention/image-20240128165725-y02ez8l.webp&#34; alt=&#34;图片描述&#34; width=&#34;auto&#34; height=&#34;auto&#34;&gt;
+&lt;img src=&#34;/posts/01_论文阅读Vision_Transformer_with_Quadrangle_Attention/image-20240128170401-2kfezb5.webp&#34; alt=&#34;图片描述&#34; width=&#34;auto&#34; height=&#34;auto&#34;&gt;
 
 　　投影的过程具体如下图所示：
-`&lt;img src=&#34;/posts/01_论文阅读Vision_Transformer_with_Quadrangle_Attention/image-20240128165840-o52h6db.webp&#34; alt=&#34;图片描述&#34; width=&#34;auto&#34; height=&#34;auto&#34;&gt;`
+&lt;img src=&#34;/posts/01_论文阅读Vision_Transformer_with_Quadrangle_Attention/image-20240128165840-o52h6db.webp&#34; alt=&#34;图片描述&#34; width=&#34;auto&#34; height=&#34;auto&#34;&gt;
 
 　　两个不同参数的变换，在绝对坐标系下的对比如下：
-`&lt;img src=&#34;/posts/01_论文阅读Vision_Transformer_with_Quadrangle_Attention/image-20240128170116-ljrtf5o.webp&#34; alt=&#34;图片描述&#34; width=&#34;auto&#34; height=&#34;auto&#34;&gt;`
+&lt;img src=&#34;/posts/01_论文阅读Vision_Transformer_with_Quadrangle_Attention/image-20240128170116-ljrtf5o.webp&#34; alt=&#34;图片描述&#34; width=&#34;auto&#34; height=&#34;auto&#34;&gt;
 
 　　当$t=0$时，变换后的四边形就是原始的窗口。初始化时，t都会初始化成0.
 
-　　在同一坐标下使用坐标变换可能会导致歧义。`&lt;img src=&#34;/posts/01_论文阅读Vision_Transformer_with_Quadrangle_Attention/image-20240128170116-ljrtf5o.webp&#34; alt=&#34;图片描述&#34; width=&#34;auto&#34; height=&#34;auto&#34;&gt;`如图所示，a的原点更靠近坐标中心。经过它们都有相同的投影变换矩阵，但是变换前后的差别非常大。因此变换是基于每个窗口的相对坐标来进行的，而不是基于绝对坐标。
+　　在同一坐标下使用坐标变换可能会导致歧义。&lt;img src=&#34;/posts/01_论文阅读Vision_Transformer_with_Quadrangle_Attention/image-20240128170116-ljrtf5o.webp&#34; alt=&#34;图片描述&#34; width=&#34;auto&#34; height=&#34;auto&#34;&gt;如图所示，a的原点更靠近坐标中心。经过它们都有相同的投影变换矩阵，但是变换前后的差别非常大。因此变换是基于每个窗口的相对坐标来进行的，而不是基于绝对坐标。
 
-　　`&lt;img src=&#34;/posts/01_论文阅读Vision_Transformer_with_Quadrangle_Attention/image-20240128171022-q6w7rm9.webp&#34; alt=&#34;图片描述&#34; width=&#34;auto&#34; height=&#34;auto&#34;&gt;`，其中$x^c, y^c$是窗口中心点的坐标，通过变换得到相对坐标，然后使用四边形注意力处理，得到$x_r^q, y_r^q$，然后在使用如下公式变换回去`&lt;img src=&#34;/posts/01_论文阅读Vision_Transformer_with_Quadrangle_Attention/image-20240128171027-2f4x2a9.webp&#34; alt=&#34;图片描述&#34; width=&#34;auto&#34; height=&#34;auto&#34;&gt;`
+　　&lt;img src=&#34;/posts/01_论文阅读Vision_Transformer_with_Quadrangle_Attention/image-20240128171022-q6w7rm9.webp&#34; alt=&#34;图片描述&#34; width=&#34;auto&#34; height=&#34;auto&#34;&gt;，其中$x^c, y^c$是窗口中心点的坐标，通过变换得到相对坐标，然后使用四边形注意力处理，得到$x_r^q, y_r^q$，然后在使用如下公式变换回去&lt;img src=&#34;/posts/01_论文阅读Vision_Transformer_with_Quadrangle_Attention/image-20240128171027-2f4x2a9.webp&#34; alt=&#34;图片描述&#34; width=&#34;auto&#34; height=&#34;auto&#34;&gt;
 
 　　获得坐标后，使用网格采样对Key和Value进行采样，得到$K_w, V_w $
 
@@ -80,14 +80,14 @@
 
 　　由于有区域可能在特征图之外，这些区域的梯度总是0，这阻碍了四边形回归模块的学习，因此设计了一个正则化项来鼓励投影四边形覆盖有效区域
 
-　　`&lt;img src=&#34;/posts/01_论文阅读Vision_Transformer_with_Quadrangle_Attention/image-20240128172122-ntrdfyw.webp&#34; alt=&#34;图片描述&#34; width=&#34;auto&#34; height=&#34;auto&#34;&gt;`
-    `&lt;img src=&#34;/posts/01_论文阅读Vision_Transformer_with_Quadrangle_Attention/image-20240128172131-zrvapjd.webp&#34; alt=&#34;图片描述&#34; width=&#34;auto&#34; height=&#34;auto&#34;&gt;`，其中λ是超参数
+　　&lt;img src=&#34;/posts/01_论文阅读Vision_Transformer_with_Quadrangle_Attention/image-20240128172122-ntrdfyw.webp&#34; alt=&#34;图片描述&#34; width=&#34;auto&#34; height=&#34;auto&#34;&gt;
+    &lt;img src=&#34;/posts/01_论文阅读Vision_Transformer_with_Quadrangle_Attention/image-20240128172131-zrvapjd.webp&#34; alt=&#34;图片描述&#34; width=&#34;auto&#34; height=&#34;auto&#34;&gt;，其中λ是超参数
 
 ### 模型规模
 
-　　`&lt;img src=&#34;/posts/01_论文阅读Vision_Transformer_with_Quadrangle_Attention/image-20240128172308-0efonu9.webp&#34; alt=&#34;图片描述&#34; width=&#34;auto&#34; height=&#34;auto&#34;&gt;`
+　　&lt;img src=&#34;/posts/01_论文阅读Vision_Transformer_with_Quadrangle_Attention/image-20240128172308-0efonu9.webp&#34; alt=&#34;图片描述&#34; width=&#34;auto&#34; height=&#34;auto&#34;&gt;
 
-　　`&lt;img src=&#34;/posts/01_论文阅读Vision_Transformer_with_Quadrangle_Attention/image-20240128172336-hk7g4ti.webp&#34; alt=&#34;图片描述&#34; width=&#34;auto&#34; height=&#34;auto&#34;&gt;`
+　　&lt;img src=&#34;/posts/01_论文阅读Vision_Transformer_with_Quadrangle_Attention/image-20240128172336-hk7g4ti.webp&#34; alt=&#34;图片描述&#34; width=&#34;auto&#34; height=&#34;auto&#34;&gt;
 
 &lt;!-- # 实验
 
