@@ -4,16 +4,18 @@ document.addEventListener('DOMContentLoaded', function() {
       scale: 1,
       hHeadPos: 0.5,
       vHeadPos: 0.618,
-      jsonPath:
-          'https://cdn.jsdelivr.net/gh/DomathID/live2d-model@main/yiselin/model.json',  // xxx.model.json 的路径,换人物修改这个
+      //   jsonPath: '/live2d/Girls_Frontline/ump45_3403/ump45_3403.model.json',
+      //   jsonPath: '/live2d/Girls_Frontline/ump9_3404/ump9_3404.model.json',
+      //   jsonPath: '/live2d/hk416_3401/hk416_3401.model.json',
+      jsonPath: '/live2d/g41_2401/g41_2401.model.json',
     },
     display: {
       superSample: 5,     // 超采样等级
       width: 300,         // canvas的宽度
-      height: 300,        // canvas的高度
+      height: 500,        // canvas的高度
       position: 'right',  // 显示位置：左或右
-      hOffset: 0,         // canvas水平偏移
-      vOffset: 0,         // canvas垂直偏移
+      hOffset: 0,       // canvas水平偏移
+      vOffset: -100,       // canvas垂直偏移
     },
     mobile: {
       show: true,    // 是否在移动设备上显示
