@@ -1,5 +1,7 @@
 # 闭包与工厂函数
 
+
+
 # 闭包
 
 　　闭包是一个函数，它记住了它被创建时的环境。更具体地说，闭包可以访问在其外部作用域定义的非全局变量，即使在其外部作用域的生命周期已经结束时仍然如此。
@@ -24,7 +26,7 @@ my_func = outer_function(&#39;Hello&#39;)
 my_func()  # 输出: Hello
 ```
 
-　　在这个例子中，`inner_function` 是一个闭包，它“记住”了变量 `message`，即使在 `outer_function` 执行结束后。
+　　在这个例子中，`inner_function`​ 是一个闭包，它“记住”了变量 `message`​，即使在 `outer_function`​ 执行结束后。
 
 # 工厂函数
 
@@ -51,11 +53,11 @@ print(cube(4))    # 输出: 64
 
 ```
 
-　　在这个例子中，`power_factory` 是一个工厂函数，它根据指定的指数 `exponent` 创建并返回一个新的函数 `power`。
+　　在这个例子中，`power_factory`​ 是一个工厂函数，它根据指定的指数 `exponent`​ 创建并返回一个新的函数 `power`​。
 
 
 ---
 
-> 作者:   
+> 作者: lolikonloli  
 > URL: /%E9%97%AD%E5%8C%85%E4%B8%8E%E5%B7%A5%E5%8E%82%E5%87%BD%E6%95%B0/  
 
